@@ -5,6 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
+import com.yuzee.local.config.MessageTranslator;
+
 @SpringBootApplication
 public class YuzeeAppQuickBoxApplication {
 
@@ -15,6 +17,11 @@ public class YuzeeAppQuickBoxApplication {
 	@Bean
     public RestTemplate restTemplate() {
         return new RestTemplate();
+    }
+	
+    @Bean
+    public MessageTranslator messageTranslator() {
+        return new MessageTranslator();
     }
 
 }
